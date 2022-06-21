@@ -1,0 +1,20 @@
+{% extends 'basic.html' %}
+
+{% block head %} 
+<title> BMI Calculator</title>
+{% endblock %}
+
+{% block body %} 
+<h1>BMI Calculator</h1>
+<form action '/' method = 'POST'>
+    Weight: &emsp;<input type='text' name='weight'>
+    <br><br>
+    Height: &emsp;<input type='text' name='height'>
+    <br><br>
+    <button type='submit' value='submit'>Calculate</button><br><br>
+    <hr>
+</form>
+{% if bmi%}
+<p>Your BMI is {{ bmi }} </p>
+{% endif %}
+{% endblock %}
